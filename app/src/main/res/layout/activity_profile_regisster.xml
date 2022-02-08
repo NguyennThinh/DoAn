@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.RegisterActivity">
-
+    tools:context=".Activity.ProfileRegister">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -28,12 +27,12 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_RegisterPhoto"
-        android:layout_width="270dp"
-        android:layout_height="216dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ic_signup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -41,7 +40,6 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="ĐĂNG KÝ TÀI KHOẢN"
         android:textColor="@color/kPrimary"
         android:textSize="24sp"
@@ -55,24 +53,24 @@
         android:id="@+id/textInputLayout"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/edit_text"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_RegisterPhoto"
-        tools:ignore="MissingConstraints">
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/btnChoosePhoto"
+        app:layout_constraintStart_toStartOf="@+id/btnChoosePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/btnChoosePhoto">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_RegisterEmail"
+            android:id="@+id/tv_RegisterPhone"
             android:layout_width="match_parent"
+            android:inputType="number"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/kPrimary"
-            android:hint="Email"
-            android:inputType="text"
-            android:padding="10dp"
+            android:hint="Số điện thoại"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,52 +94,24 @@
             android:backgroundTint="@color/kPrimary"
             android:hint="Mật khẩu"
             android:inputType="textPassword"
-            android:padding="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
-
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_Re_RegisterPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/kPrimary"
-            android:hint="Nhập lại mật khẩu"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            tools:ignore="TouchTargetSizeCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_primary"
         android:backgroundTint="@color/kPrimary"
         android:text="Đăng ký"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
         android:id="@+id/textView3"
@@ -157,7 +127,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
     <TextView
-        android:id="@+id/tv_Login"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -165,9 +135,96 @@
         android:textColor="@color/kPrimary"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/btnRegister"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
+    <Button
+        android:id="@+id/btnChoosePhoto"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_primary_light"
+        android:backgroundTint="@color/kPrimaryLight"
+        android:hapticFeedbackEnabled="true"
+        android:text="Chọn ảnh"
+        app:layout_constraintEnd_toEndOf="@+id/img_RegisterPhoto"
+        app:layout_constraintStart_toStartOf="@+id/img_RegisterPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/img_RegisterPhoto" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_RegisterFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ và tên"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout7"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_RegisterBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ngày sinh"
+            android:inputType="date"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/button_primary_light"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+        <RadioButton
+            android:id="@+id/radNam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Nam" />
+
+        <RadioButton
+            android:id="@+id/radNu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:minHeight="48dp"
+            android:paddingRight="30dp"
+            android:text="Nữ"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

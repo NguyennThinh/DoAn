@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "953865651700",
+    "project_id": "graduation-thesis-eec60",
+    "storage_bucket": "graduation-thesis-eec60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953865651700:android:cbf96dbf2523e4703065a1",
+        "android_client_info": {
+          "package_name": "com.example.appchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953865651700-59d7erf6j5accekgb0snro58ck66jabh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appchat",
+            "certificate_hash": "53c9e3f5e638943e747a7d1c63a1d5240ec20dbd"
+          }
+        },
+        {
+          "client_id": "953865651700-9p0fb7q1h35k9bofj5dhdbdqb3asmqp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAphgLyDb5UB35PVJ7QO8pyj3QDeEaW2HQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953865651700-9p0fb7q1h35k9bofj5dhdbdqb3asmqp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
